@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Chatbot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <div id="chat-container">
-        <div id="chat-box"></div>
-        <input type="text" id="user-input" placeholder="Type your message...">
-        <button id="send-btn">Send</button>
+    <div class="chatbot">
+        <header>
+            <h2>AI Chatbot</h2>
+        </header>
+        <div class="chatbox">
+            <div class="chat incoming">
+                <span class="material-icons">smart_toy</span>
+                <p>Hi there! How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <textarea placeholder="Type your message..." required></textarea>
+            <span id="send-btn" class="material-icons">send</span>
+        </div>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </body>
 </html>

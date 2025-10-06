@@ -6,7 +6,3 @@ torch
 scikit-learn
 pymongo
 python-dotenv
-fastapi
-uvicorn[standard]
-python-multipart
-tensorflow
