@@ -43,7 +43,7 @@ def generate_and_store_fact(user_message, bot_response):
         Fact:"""
 
         # Generate the fact using the generative model
-        model_gemini = genai.GenerativeModel('gemini-pro')
+        model_gemini = genai.GenerativeModel('gemini-2.5-flash')
         response = model_gemini.generate_content(prompt)
         summarized_fact = response.text.strip()
 
@@ -93,7 +93,7 @@ def chat():
     prompt = f"User message: \"{user_message}\"\n\n{context}\n\nRespond to the user's message."
 
     try:
-        model_gemini = genai.GenerativeModel('gemini-pro')
+        model_gemini = genai.GenerativeModel('gemini-2.5-flash')
         response = model_gemini.generate_content(prompt)
         bot_response = response.text
     except Exception as e:

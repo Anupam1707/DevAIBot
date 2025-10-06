@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const API_URL = '/chat';
         const messageElement = incomingChatLi.querySelector('p');
 
+        // Display loading animation
+        messageElement.textContent = '...';
+
         fetch(API_URL, {
             method: 'POST',
             headers: {
